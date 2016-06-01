@@ -2,22 +2,23 @@
 
 This is a little helper app which connects to a google spreadsheet and generates JSON or JS files for translation keys.
 
+At the moment there is only the console based version of the app working, which depends on settings.json file as configuration. A simple GUI is work in progress :)
+
 ## Setup
 
 1. git clone this repository
-2. setup your google project following these [steps](https://github.com/ongoworks/meteor-google-spreadsheets#package-setup)
+2. setup your google project and `private/google-key.pem` file following these [steps](https://github.com/ongoworks/meteor-google-spreadsheets#package-setup)
 3. setup your `settings.json` file
 4. run `i18n-monitor` to poll spreadsheet
 
 ## Supported i18n solutions (packages)
 
-***anti:i18n***
+[anti:i18n](https://github.com/anticoders/meteor-i18n)
 Slim solutions for small projects, uses JS Objects
- https://github.com/anticoders/meteor-i18n
 
-***tap:i18n***
+[tap:i18n](https://github.com/TAPevents/tap-i18n)
 Pretty complete solution with almost all use-cases covered, uses JSON format
- https://github.com/TAPevents/tap-i18n
+ 
 
 ## settings.json options
 
@@ -60,3 +61,6 @@ cd i18n-monitor
 npm install
 meteor --settings settings.json
 ```
+
+**ATTENTION**
+To run `npm install` you need to install at least version 3.0.0 of `npm`.
