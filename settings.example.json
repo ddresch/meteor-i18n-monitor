@@ -1,0 +1,22 @@
+{
+  "jobs": [
+    {
+      "spreadsheetId": "YOUR_SPREADSHEET_ID",
+      "worksheetIndex": "1",
+      "serviceEmail": "YOUR_GOOGLE_SERVICE_EMAIL",
+      "outputFolder": "LOCAL_PATH_TO_YOUR_METEOR_APP_FOLDER",
+      "validLanguages": ["de","fr","it"],
+      "pollTimeout": 30000
+    },
+    {
+      "spreadsheetId": "YOUR_SPREADSHEET_ID",
+      "worksheetIndex": "2",
+      "serviceEmail": "YOUR_GOOGLE_SERVICE_EMAIL",
+      "outputFolder": "LOCAL_PATH_TO_YOUR_METEOR_APP_FOLDER",
+      "validLanguages": ["de","fr","it"],
+      "pollTimeout": 30000,
+      "outputFormat": "json",
+      "outputFileExtension": ".i18n.json"
+    }
+  ]
+}
