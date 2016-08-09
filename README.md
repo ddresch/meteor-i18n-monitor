@@ -16,9 +16,17 @@ At the moment there is only the console based version of the app working, which 
 [anti:i18n](https://github.com/anticoders/meteor-i18n)
 Slim solutions for small projects, uses JS Objects
 
+Output Format: `js`
+
 [tap:i18n](https://github.com/TAPevents/tap-i18n)
 Pretty complete solution with almost all use-cases covered, uses JSON format
- 
+
+Output Format: `json`
+
+[react-intl](https://github.com/yahoo/react-intl)
+ A translation solution made for React framework.
+
+Output Format: `intl`
 
 ## settings.json options
 
@@ -48,6 +56,16 @@ You can define multiple jobs within the JSON file which get exported to the spec
       "pollTimeout": 30000,
       "outputFormat": "json",
       "outputFileExtension": ".i18n.json"
+    },
+    {
+      "spreadsheetId": "YOUR_SPREADSHEET_ID",
+      "worksheetIndex": "3",
+      "serviceEmail": "YOUR_GOOGLE_SERVICE_EMAIL",
+      "outputFolder": "LOCAL_PATH_TO_YOUR_METEOR_APP_FOLDER",
+      "validLanguages": ["de","fr","it"],
+      "pollTimeout": 30000,
+      "outputFormat": "intl",
+      "outputFileExtension": ".i18n.js"
     }
   ]
 }

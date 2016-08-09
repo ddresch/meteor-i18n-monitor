@@ -1,3 +1,4 @@
 node_modules
 settings.json
 private/google-key.pem
+npm-debug.log

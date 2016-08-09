@@ -87,6 +87,15 @@ export default function () {
         if(outputFormat == 'json'){
           out += JSON.stringify(outputFiles[lang], null, 2);
         }
+        if(outputFormat == 'intl'){
+          out = 'const ' + lang + ' = {\n'
+          for(const mod in outputFiles[lang]){
+            for(const lbl in outputFiles[lang][mod]){
+              out += '  "' + mod + '.' + lbl + '": "' + outputFiles[lang][mod][lbl] + '",\n'
+            }
+          }
+          out += '}\n\nexport default ' + lang
+        }
         var outFilepath = outputFolder + '/' + lang + outputFileExtension;
         fs.writeFileSync(outFilepath, out);
         console.log('Wrote file: ', outFilepath);
